@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased text-pretty`}
     >
       <body className="min-h-full flex flex-col">
         {children}
