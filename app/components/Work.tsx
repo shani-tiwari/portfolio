@@ -38,7 +38,7 @@ export default function Work(){
                         works.map((work,i) => (
                             <div key={i} className='flex flex-1 flex-col gap-2 bg-gray-50 rounded-xl p-4 md:text-balance border border-gray-200'>
                                 <div className="top flex gap-4 items-center">
-                                    <Image className='object-cover rounded-lg bg-black/80 border-2 max-h-12' src={`${work.logo}`} width='40' height='40' alt={`${work.name} logo`} />
+                                    <Image className='object-contain rounded-lg bg-black/80 border-2' src={work.logo} width='40' height='40' alt={`${work.name} logo`} />
                                     <p className='text-lg'>{work.name}</p>
                                 </div>
                                 <div className="bottom flex flex-col gap-2">
@@ -60,15 +60,15 @@ export default function Work(){
                 <legend className='text-xs'>Site Recreations</legend>
                 
                 <div className="content flex flex-col md:flex-row gap-4 -mt-1">
-                    <div className='w-full h-54 rounded-xl overflow-hidden relative border border-gray-400'>
-                        <Link href='https://plas-sandy.vercel.app/'>
-                            <Image className='object-cover' src='/lpas.png' fill sizes='auto' alt=''/>
+                    <div className='w-full rounded-xl overflow-hidden relative border border-gray-400'>
+                        <Link href='https://plas-sandy.vercel.app/'className='block relative w-full h-56'>
+                            <Image className='object-cover' src='/lpas.png' fill  alt=''/>
                         </Link>
                     </div>
 
-                    <div className='w-full h-54 rounded-xl overflow-hidden relative border border-gray-400'>
-                        <Link href='https://plas-sandy.vercel.app/' >
-                            <Image className='object-cover' src='/neu.png' fill sizes='auto' alt=''/>
+                    <div className='w-full rounded-xl overflow-hidden relative border border-gray-400'>
+                        <Link href='https://plas-sandy.vercel.app/' className='block relative w-full h-56' >
+                            <Image className='object-cover' src='/neu.png' fill  alt=''/>
                         </Link>
                     </div>
                 </div>
