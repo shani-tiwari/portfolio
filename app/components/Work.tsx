@@ -31,12 +31,12 @@ export default function Work(){
             </div>
 
             {/* extension  */}
-            <fieldset className='border p-2 rounded-lg border-gray-400'>
+            <fieldset className='border p-1 md:p-2 rounded-lg border-gray-400'>
                 <legend className='text-xs'>IDE Extentions</legend>
-                <div className="works flex justify-center gap-4 -mt-1">
+                <div className="works flex flex-col md:flex-row justify-center gap-4 -mt-1">
                     {
                         works.map((work,i) => (
-                            <div key={i} className='flex flex-1 flex-col gap-2 bg-gray-50 rounded-xl p-4 text-balance border border-gray-200'>
+                            <div key={i} className='flex flex-1 flex-col gap-2 bg-gray-50 rounded-xl p-4 md:text-balance border border-gray-200'>
                                 <div className="top flex gap-4 items-center">
                                     <Image className='object-cover rounded-lg bg-black/80 border-2' src={`${work.logo}`} width='40' height='40' alt={`${work.name} logo image`} />
                                         <p className='text-lg'>{work.name}</p>
@@ -56,17 +56,17 @@ export default function Work(){
             </fieldset>
 
             {/* sites  */}
-            <fieldset className='border p-2 rounded-lg border-gray-400'>
+            <fieldset className='border p-1 md:p-2 rounded-lg border-gray-400'>
                 <legend className='text-xs'>Site Recreations</legend>
                 
-                <div className="content flex gap-4 -mt-1">
-                    <div className='w-1/2 h-50 rounded-xl overflow-hidden relative border border-gray-400'>
+                <div className="content flex flex-col md:flex-row gap-4 -mt-1">
+                    <div className='w-full h-54 rounded-xl overflow-hidden relative border border-gray-400'>
                         <Link href='https://plas-sandy.vercel.app/'>
                             <Image className='object-cover' src='/lpas.png' fill sizes='auto' alt=''/>
                         </Link>
                     </div>
 
-                    <div className='w-1/2 h-50 rounded-xl overflow-hidden relative border border-gray-400'>
+                    <div className='w-full h-54 rounded-xl overflow-hidden relative border border-gray-400'>
                         <Link href='https://plas-sandy.vercel.app/' >
                             <Image className='object-cover' src='/neu.png' fill sizes='auto' alt=''/>
                         </Link>

@@ -133,62 +133,71 @@ export default function MotionText() {
 
   // }, { scope: containerRef });
 
+
+  // function selectElementText(el) {
+  //   if (window.getSelection && document.createRange) {
+  //     const selection = window.getSelection();
+  //     const range = document.createRange();
+  //     range.selectNodeContents(el);
+  //     selection.removeAllRanges();
+  //     selection.addRange(range);
+  //   }
+  // };
+
   return (
     <div ref={containerRef}
-      className="flex gap-2 items-center justify-center overflow-visible w-fit"
+      className="flex flex-col gap-4 md:flex-row md:items-center items-start justify-between w-full pr-4"
     >
-      {/* Avatar */}
-      <div ref={avatarOuterRef}
-        className="flex justify-center shrink-0"
-      >
-        <div ref={avatarInnerRef}
-          style={{
-            width: size,
-            height: size,
-          }}
-          className="squiracle relative overflow-hidden"
+      <div className="flex gap-2 items-center justify-center overflow-visible w-fit">
+        {/* Avatar */}
+        <div ref={avatarOuterRef}
+          className="flex justify-center shrink-0"
         >
-          <Image
-            src="/me.jpg"
-            alt="avatar"
-            fill
-            sizes="52px"
-            className="object-cover"
-          />
+          <div ref={avatarInnerRef}
+            style={{ width: size, height: size }}
+            className="squiracle relative overflow-hidden"
+          >
+            <Image
+              src="/me.jpg"
+              alt="avatar"
+              fill
+              sizes="52px"
+              className="object-cover"
+            />
+          </div>
         </div>
-      </div>
 
-      <div>
-        {/* Name */}
         <div>
-          <span ref={shaniRef}
-            className="inline-block text-2xl overflow-visible"
-          >
-            Shani
-          </span>
+          {/* Name */}
+          <div>
+            <span ref={shaniRef} className="inline-block text-2xl overflow-visible">
+              Shani
+            </span>
 
-          <span ref={tiwariRef}
-            className="inline-block text-2xl"
-          >
-            <span> Tiwari</span>
+            <span ref={tiwariRef} className="inline-block text-2xl">
+              <span> Tiwari</span>
 
-            <span ref={mrCoolRef}
-              className="inline-block text-base"
-            >
-              /mr cool
+              <span ref={mrCoolRef} className="inline-block text-base">
+                /mr cool
+              </span>
+            </span>
+          </div>
+
+          {/* Profession */}
+          <span ref={professionRef} className="inline-block">
+            <span className="text-sm font-sans">
+              Design Engineer/Developer
             </span>
           </span>
         </div>
-
-        {/* Profession */}
-        <span ref={professionRef}
-          className="inline-block"
-        >
-          <span className="text-sm font-sans">
-            Design Engineer/Developer
-          </span>
-        </span>
       </div>
+
+      {/* email */}
+      <div>
+        <p className="text-xs">Click Email:</p> 
+        <p className="text-sm select-all">shanitiwari2021@gmail.com</p>
+      </div>
+
     </div>
   );
 }
