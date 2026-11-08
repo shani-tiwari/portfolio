@@ -194,7 +194,7 @@ export default function MotionText() {
 
       {/* email */}
       <div>
-        <p className="text-xs">Click Email:</p> 
+        <p className="text-xs"> Email:</p> 
         <p className="text-sm select-all">shanitiwari2021@gmail.com</p>
       </div>
 

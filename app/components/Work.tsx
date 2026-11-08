@@ -38,8 +38,8 @@ export default function Work(){
                         works.map((work,i) => (
                             <div key={i} className='flex flex-1 flex-col gap-2 bg-gray-50 rounded-xl p-4 md:text-balance border border-gray-200'>
                                 <div className="top flex gap-4 items-center">
-                                    <Image className='object-cover rounded-lg bg-black/80 border-2' src={`${work.logo}`} width='40' height='40' alt={`${work.name} logo image`} />
-                                        <p className='text-lg'>{work.name}</p>
+                                    <Image className='object-cover rounded-lg bg-black/80 border-2 max-h-12' src={`${work.logo}`} width='40' height='40' alt={`${work.name} logo`} />
+                                    <p className='text-lg'>{work.name}</p>
                                 </div>
                                 <div className="bottom flex flex-col gap-2">
                                     <p className='text-base text-black/80 mb-2 leading-5'>{work.desc}</p>
