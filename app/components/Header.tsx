@@ -8,6 +8,10 @@ import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
 
+
+
+
+
 export default function MotionText() {
   const size = 52;
 
@@ -19,132 +23,125 @@ export default function MotionText() {
   const mrCoolRef = useRef<HTMLSpanElement>(null);
   const professionRef = useRef<HTMLSpanElement>(null);
 
-  useGSAP(() => {
-    gsap.set(avatarOuterRef.current, { width: 0 });
-    gsap.set(avatarInnerRef.current, { scale: 0 });
+  // useGSAP(() => {
+  //   gsap.set(avatarOuterRef.current, { width: 0 });
+  //   gsap.set(avatarInnerRef.current, { scale: 0 });
 
-    gsap.set(shaniRef.current, {
-      x: 0,
-      y: 0,
-      rotate: -10,
-      filter: "blur(0.5px)",
-    });
+  //   gsap.set(shaniRef.current, {
+  //     x: 0,
+  //     y: 0,
+  //     rotate: -10,
+  //     filter: "blur(0.5px)",
+  //   });
 
-    gsap.set(tiwariRef.current, {
-      x: 60,
-      opacity: 0,
-      rotate: 40,
-    });
+  //   gsap.set(tiwariRef.current, {
+  //     x: 60,
+  //     opacity: 0,
+  //     rotate: 40,
+  //   });
 
-    gsap.set(mrCoolRef.current, {
-      opacity: 0,
-      filter: "blur(4px)",
-    });
+  //   gsap.set(mrCoolRef.current, {
+  //     opacity: 0,
+  //     filter: "blur(4px)",
+  //   });
 
-    gsap.set(professionRef.current, {
-      opacity: 0,
-      filter: "blur(4px)",
-    });
+  //   gsap.set(professionRef.current, {
+  //     opacity: 0,
+  //     filter: "blur(4px)",
+  //   });
 
-    const tl = gsap.timeline();
+  //   const tl = gsap.timeline();
 
-    // Shani
-    tl.to(
-      shaniRef.current,
-      {
-        rotate: 0,
-        filter: "blur(0px)",
-        duration: 0.5,
-        ease: "back.out",
-      },
-      0
-    );
+  //   // Shani
+  //   tl.to(shaniRef.current, {
+  //       rotate: 0,
+  //       filter: "blur(0px)",
+  //       duration: 0.5,
+  //       ease: "back.out",
+  //     },
+  //     0
+  //   );
 
-    tl.to(
-      shaniRef.current,
-      {
-        keyframes: [
-          { x: 18, y: -5, duration: 0.25, ease: "back.out" },
-          { x: 0, y: 0, duration: 0.25, ease: "back.out" },
-        ],
-      },
-      0
-    );
+  //   tl.to(shaniRef.current, {
+  //       keyframes: [
+  //         { x: 18, y: -5, duration: 0.25, ease: "back.out" },
+  //         { x: 0, y: 0, duration: 0.25, ease: "back.out" },
+  //       ],
+  //     },
+  //     0
+  //   );
 
-    // Tiwari
-    tl.to(
-      tiwariRef.current,
-      {
-        x: 6,
-        opacity: 1,
-        rotate: 0,
-        duration: 0.35,
-        ease: "back.out",
-      },
-      0.05
-    );
+  //   // Tiwari
+  //   tl.to(tiwariRef.current, {
+  //       x: 6,
+  //       opacity: 1,
+  //       rotate: 0,
+  //       duration: 0.35,
+  //       ease: "back.out",
+  //     },
+  //     0.05
+  //   );
 
-    // Avatar outer
-    tl.to(
-      avatarOuterRef.current,
-      {
-        width: size,
-        duration: 0.45,
-        ease: "back.out",
-      },
-      0.5
-    );
+  //   // Avatar outer
+  //   tl.to(avatarOuterRef.current, {
+  //       width: size,
+  //       duration: 0.45,
+  //       ease: "back.out",
+  //     },
+  //     0.5
+  //   );
 
-    // Avatar inner
-    tl.to(
-      avatarInnerRef.current,
-      {
-        keyframes: [
-          { scale: 1.1, duration: 0.225, ease: "back.out" },
-          { scale: 1, duration: 0.225, ease: "back.out" },
-        ],
-      },
-      0.6
-    );
+  //   // Avatar inner
+  //   tl.to(avatarInnerRef.current,
+  //     {
+  //       keyframes: [
+  //         { scale: 1.1, duration: 0.225, ease: "back.out" },
+  //         { scale: 1, duration: 0.225, ease: "back.out" },
+  //       ],
+  //     },
+  //     0.6
+  //   );
 
-    // Mr Cool
-    tl.to(
-      mrCoolRef.current,
-      {
-        opacity: 1,
-        filter: "blur(0px)",
-        duration: 0.45,
-        ease: "power1.out",
-      },
-      1
-    );
+  //   // Mr Cool
+  //   tl.to(mrCoolRef.current, {
+  //       opacity: 1, 
+  //       filter: "blur(0px)", 
+  //       duration: 0.45, 
+  //       ease: "power1.out",
+  //     }, 1
+  //   );
 
-    // Profession
-    tl.to(
-      professionRef.current,
-      {
-        opacity: 1,
-        filter: "blur(0px)",
-        duration: 0.35,
-        ease: "power1.out",
-      },
-      1.25
-    );
+  //   // Profession
+  //   tl.to(professionRef.current,
+  //     {
+  //       opacity: 1,
+  //       filter: "blur(0px)",
+  //       duration: 0.35,
+  //       ease: "power1.out",
+  //     },
+  //     1.25
+  //   );
 
-  }, { scope: containerRef });
+  //   tl.fromTo(containerRef.current, {
+  //       y: 250,
+  //       scale: 1.05,
+  //       duration: 0.5,
+  //       ease: "power1.out",
+  //   }, {
+  //       y: 4, scale: 1
+  //   });
+
+  // }, { scope: containerRef });
 
   return (
-    <div
-      ref={containerRef}
+    <div ref={containerRef}
       className="flex gap-2 items-center justify-center overflow-visible w-fit"
     >
       {/* Avatar */}
-      <div
-        ref={avatarOuterRef}
+      <div ref={avatarOuterRef}
         className="flex justify-center shrink-0"
       >
-        <div
-          ref={avatarInnerRef}
+        <div ref={avatarInnerRef}
           style={{
             width: size,
             height: size,
@@ -164,21 +161,18 @@ export default function MotionText() {
       <div>
         {/* Name */}
         <div>
-          <span
-            ref={shaniRef}
+          <span ref={shaniRef}
             className="inline-block text-2xl overflow-visible"
           >
             Shani
           </span>
 
-          <span
-            ref={tiwariRef}
+          <span ref={tiwariRef}
             className="inline-block text-2xl"
           >
             <span> Tiwari</span>
 
-            <span
-              ref={mrCoolRef}
+            <span ref={mrCoolRef}
               className="inline-block text-base"
             >
               /mr cool
@@ -187,8 +181,7 @@ export default function MotionText() {
         </div>
 
         {/* Profession */}
-        <span
-          ref={professionRef}
+        <span ref={professionRef}
           className="inline-block"
         >
           <span className="text-sm font-sans">
